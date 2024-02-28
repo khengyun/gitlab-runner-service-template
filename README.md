@@ -1,4 +1,4 @@
-# gitlab-runner-service
+# gitlab-runner-service-template
 
 ## This is template for gitlab runner service
 
