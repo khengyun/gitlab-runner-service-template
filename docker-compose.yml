@@ -4,7 +4,6 @@ services:
   dind:
     image: docker:23.0.1-dind
     restart: always
-    privileged: true
     environment:
       DOCKER_TLS_CERTDIR: ""
     command:
@@ -38,3 +37,11 @@ services:
       - --docker-volumes=/var/run/docker.sock:/var/run/docker.sock
     volumes:
       - ./config:/etc/gitlab-runner:z
+      - /var/run/docker.sock:/var/run/docker.sock
+
+#     volumes:
+#       - runner_swarm:
+
+# volumes:
+#   runner_swarm:
+#     external: true
